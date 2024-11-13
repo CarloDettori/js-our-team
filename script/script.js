@@ -38,30 +38,28 @@ const teamMembers = [
   }
 ];
 
-
-
-
 let template = ""
 let cardBox = document.getElementById("cardBox")
+function cardDrowing() {
+  for (let i of teamMembers) {
 
-
-
-for (let i of teamMembers) {
-
-  template += `
+    template += `
     <!-- card ${i} -->
-    <div class="debug d-flex p-3 col-4 ">
-      <div class="debug">
+    <div style="flex: 1 1 auto; min-width: 400px;" class="debug d-flex p-3 pt-5">
+      <div id="img-box" style="flex: 0 0 150px;" class="debug">
         <img class="debug" src="${i.img}" alt="${i.name}">
       </div>
-      <div class="d-flex flex-column debug col-8 p-3 text-white bg-black">
+      <div style="flex: 1 1 auto;" class="d-flex flex-column debug col-8 p-3 text-white bg-black">
         <h6 class="debug">${i.name.toUpperCase()}</h6>
         <p class="debug">${i.role}</p>
-        <a class="debug text-decoration-none" href="">${i.email}@team.com</a>
+        <a class="debug text-decoration-none" href="">${i.email}</a>
       </div>
     </div>
 `
+  }
+  cardBox.innerHTML = template;
 }
-cardBox.innerHTML = template;
+cardDrowing()
+
 
 
