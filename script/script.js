@@ -40,17 +40,23 @@ const teamMembers = [
 
 
 
-
-template = `
-<!-- card MUNERO CARD -->
-<div class="debug d-flex p-3 col-4 ">
-  <div class="debug">
-    <img class="debug" src="./img/.png" alt=" Profile-img col-4">
-  </div>
-  <div class="d-flex flex-column debug col-8 p-3 text-white bg-black">
-    <h6 class="debug">NAME</h6>
-    <p class="debug">ROLE</p>
-    <a class="debug text-decoration-none" href="">MAIL</a>
-  </div>
-</div>
+let template = ""
+let cardBox = document.getElementById("cardBox")
+for (let i of teamMembers) {
+  template += `
+    <!-- card MUNERO CARD -->
+    <div class="debug d-flex p-3 col-4 ">
+      <div class="debug">
+        <img class="debug" src="./img/.png" alt=" Profile-img col-4">
+      </div>
+      <div class="d-flex flex-column debug col-8 p-3 text-white bg-black">
+        <h6 class="debug">NAME</h6>
+        <p class="debug">ROLE</p>
+        <a class="debug text-decoration-none" href="">MAIL</a>
+      </div>
+    </div>
 `
+}
+cardBox.innerHTML = template;
+
+
