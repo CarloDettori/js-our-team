@@ -62,4 +62,21 @@ function cardDrowing() {
 cardDrowing()
 
 
+const form = document.getElementById("form");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  event.stopPropagation();
+  let image = document.getElementById("image");
+  let name = document.getElementById("name");
+  let role = document.getElementById("role");
+  let mail = document.getElementById("mail");
 
+  let newCard = {
+    image,
+    name,
+    role,
+    mail,
+  }
+  console.log(newCard)
+  teamMembers.push(newCard);
+})

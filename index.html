@@ -10,19 +10,35 @@
 </head>
 
 <body>
-    <section class="debug contcontainer-box">
+    <section class="debug container-box">
         <!-- titolo + testo lorem -->
-        <h1 class="debug text-center pt-5">OUR Team</h1>
+        <h1 class="debug text-center pt-5">OUR TEAM</h1>
         <h5 class="debug text-center pt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam vitae fugit
             cumque
             placeat,
             fugiat, eveniet
             molestiae ea quo consectetur eius quos ex animi repellat eos amet dolorem, autem voluptates error!</h5>
         <!-- cards -->
-        <div id="cardBox" class="debug pt-3 d-flex flex-wrap">
-
+        <div id="cardBox" class="debug pt-3 d-flex flex-wrap"></div>
+        <div class="debug container-box p-3">
+            <h1>Registrati</h1>
+            <form id="form" class="d-flex flex-column">
+                <label for="image">Carica Immagine</label>
+                <input type="text" name="image" id="image">
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name">
+                <label for="role">Ruolo</label>
+                <input type="text" name="role" id="role">
+                <label for="mail">e-mail</label>
+                <input type="text" name="mail" id="mail">
+                <div class="d-flex justify-content-center">
+                    <button type="submit">Conferma</button>
+                    <button type="reset">Cancella</button>
+                </div>
+            </form>
         </div>
     </section>
+
     <script src="./script/script.js"></script>
 </body>
 
