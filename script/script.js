@@ -72,11 +72,10 @@ form.addEventListener("submit", function (event) {
   let mail = document.getElementById("mail");
 
   let newCard = {
-    image,
     name,
     role,
     mail,
   }
-  console.log(newCard)
   teamMembers.push(newCard);
+  console.log(teamMembers);
 })
