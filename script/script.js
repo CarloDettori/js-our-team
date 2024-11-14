@@ -45,7 +45,7 @@ function cardDrowing() {
 
     template += `
     <!-- card ${i} -->
-    <div style="flex: 1 1 auto; min-width: 400px;" class="debug d-flex p-3 pt-5">
+    <div style="flex: 1 1 auto; min-width: 400px;" class="debug d-flex p-3 pt-5 col-4">
       <div id="img-box" style="flex: 0 0 150px;" class="debug">
         <img class="debug" src="${i.img}" alt="${i.name}">
       </div>
@@ -59,18 +59,17 @@ function cardDrowing() {
   }
   cardBox.innerHTML = template;
 }
-cardDrowing()
+cardDrowing();
 
 
 const form = document.getElementById("form");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   event.stopPropagation();
-  let image = document.getElementById("image");
-  let name = document.getElementById("name");
-  let role = document.getElementById("role");
-  let mail = document.getElementById("mail");
-
+  let img = document.getElementById("image").value;
+  let name = document.getElementById("name").value;
+  let role = document.getElementById("role").value;
+  let mail = document.getElementById("mail").value;
   let newCard = {
     name,
     role,
@@ -78,4 +77,5 @@ form.addEventListener("submit", function (event) {
   }
   teamMembers.push(newCard);
   console.log(teamMembers);
+  cardDrowing();
 })
